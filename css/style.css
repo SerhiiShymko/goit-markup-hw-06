@@ -111,6 +111,8 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--main-color-text);
+
+  transition: color 250ms var(--timings);
 }
 
 .header-list .item + .item {
@@ -135,7 +137,6 @@ img {
   height: 4px;
   background-color: var(--accent-color);
 
-   transition: color 250ms var(--timings);
 }
 
 .header-list-link:hover,
@@ -174,7 +175,7 @@ display: block;
 .header-contact .contacts:hover,
 .header-contact .contacts:focus {
   color: var(--accent-color);
-  /* transition: color 250ms var(--timings); */
+  
 }
 
 .header-contact .icon {
@@ -520,7 +521,6 @@ display: block;
   width: 170px;
   height: 92px;
   margin-left: 30px;
-  /* outline: 1px solid red; */
 }
 
 .client-item:first-child {
@@ -626,7 +626,6 @@ display: block;
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
-  /* transition: color 250ms var(--timings); */
 }
 
 /* приєднуйтесь */
@@ -676,7 +675,6 @@ display: block;
 .footer-join .social-link:hover,
 .footer-join .social-link:focus {
   background-color: var(--accent-color);
-  /* transition: background-color 250ms var(--timings); */
 }
 
 /* Портфоліо*************************************************** */
@@ -724,24 +722,28 @@ display: block;
   padding-bottom: 50px;
 }
 
-.card-list {
+.card-list {  
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--gap));
   margin-top: calc(-1 * var(--gap));
 }
 
-
-.card-item {
-    flex-basis: calc((100% - 3 * var(--gap)) / 3);
-    margin-left: var(--gap);
-    margin-top: var(--gap);
+.card-item .card-link {
+    display: flex;
+    flex-direction: column;
 
     background: var(--main-white-color);
     border: 1px solid #eeeeee;
 
   transition: background-color 250ms var(--timings), border 250ms var(--timings),
     box-shadow 250ms var(--timings);
+}
+
+.card-item {
+    flex-basis: calc((100% - 3 * var(--gap)) / 3);
+    margin-left: var(--gap);
+    margin-top: var(--gap);
 }
 
 .card-thumb {
@@ -773,11 +775,12 @@ display: block;
     background-color: rgba(33, 150, 243, 0.9);
 
     transition: transform 250ms var(--timings);
-    transform: translateY(100%);
+    transform: translateY(101%);
 }
 
-.card-item .link:hover .card-description{
-  transform: translateY(0);
+.card-item .link:hover .card-description,
+.card-item .link:focus .card-description{
+  transform: translateY(0); 
 }
 
 .card-content {
@@ -800,8 +803,8 @@ display: block;
   letter-spacing: 0.03em;
   color: var(--second-color-text);
 }
-.card-list .card-item:hover,
-.card-list .card-item:focus {
+.card-list .card-link:hover,
+.card-list .card-link:focus {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
