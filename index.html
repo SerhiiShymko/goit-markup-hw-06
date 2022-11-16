@@ -372,9 +372,23 @@
           </li>
         </ul>
       </div>
+      <div class="subscription">
+        <form class="form-subscription">
+          <div class="subscription-mail">
+            <label for="subscription" class="subscription-mail-title">Підпишіться на розсилку</label>
+            <input type="text" id="subscription" name="subscription" class="subscription-input" placeholder="E-mail">
+          </div>
+          <button type="submit" class="subscription-button button">
+            <svg class="icon-subscription" width="24" height="24">
+              <use href="./images/icons.svg#telegram"></use>
+            </svg>
+            Підписатися
+          </button>
+        </form>
+      </div>
     </div>
   </footer>
-  <div class="backdrop" data-modal>
+  <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button class="close-button" type="button" data-modal-close>
         <svg class="icon-close" width="18" height="18">
@@ -382,9 +396,9 @@
         </svg>
       </button>
       <form name="form-modal" class="form-userdata">
-        <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
         <div class="form-list">
-          <label for="user-name" >
+          <label for="user-name">
             <span class="form-label">Ім'я</span>
           </label>
           <input type="text" name="user-name" id="user-name" class="modal-input" />
@@ -411,13 +425,13 @@
         <div class="checkbox-list">
           <input type="checkbox" name="user-chachbox" id="user-chachbox" class="modal-chechbox">
           <label for="user-chachbox">
-           <span class="chechbox-title">Погоджуюся з розсилкою та приймаю 
-            <a href="" class="chechbox-link">Умови договору</a>
-          </span>
+            <span class="chechbox-title">Погоджуюся з розсилкою та приймаю
+              <a href="" class="chechbox-link">Умови договору</a>
+            </span>
           </label>
         </div>
-        <div class="model-btn">
-             <button type="submit" class="model-button button">Відправити</button>
+        <div class="modal-btn">
+          <button type="submit" class="modal-button button">Відправити</button>
         </div>
       </form>
     </div>

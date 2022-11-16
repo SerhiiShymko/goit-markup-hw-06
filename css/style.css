@@ -50,6 +50,8 @@ p {
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms var(--timings);
 }
 
 .visually-hidden {
@@ -238,8 +240,6 @@ display: block;
   display: block;
   margin-top: var(--gap);
   padding: 10px 32px;
-
-  transition: background-color 250ms var(--timings);
 }
 /* Модальне вікно */
 .backdrop {
@@ -334,7 +334,7 @@ display: block;
 }
 
 .form-label {
-  display: inline-block;
+  display: block;
   width: 100%;
   margin-bottom: 4px;
 
@@ -350,7 +350,6 @@ display: block;
   height: 120px;
   resize: none;
   padding: 12px 16px;
-  
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -366,6 +365,7 @@ display: block;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+  
 }
 
 .checkbox-list {
@@ -373,7 +373,7 @@ display: block;
 }
 
 .modal-chechbox {
-  background: var(--main-color-text);
+  border: var(--main-color-text);
 }
 
 .chechbox-title {
@@ -393,19 +393,33 @@ display: block;
   color: var(--accent-color);
 }
 
-.model-button {
- 
-
-  /* margin-top: var(--gap); */
+.modal-button {
   padding: 10px 52px;
-
-  transition: background-color 250ms var(--timings);
 }
-.model-btn {
-  display: flex;
+
+.modal-button:hover,
+.modal-button:focus {
+  background: var(--activ);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.modal-btn {
+  display: flex; 
   align-items: center;
   justify-content: center;
 }
+
+.modal-input:hover,
+.modal-input:focus,
+.modal-textarea:hover,
+.modal-textarea:focus {
+  fill: var(--accent-color);
+  background-color: var(--main-white-color);
+  border-color: var(--accent-color);
+  
+}
+
 /* features */
 .features .features-icon {
   display: flex;
@@ -645,6 +659,8 @@ display: block;
 
 .footer-page .container {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .logo-box {
@@ -653,13 +669,20 @@ display: block;
 
 .join-box {
   margin-top: 72px;
-  margin-left: 70px;
+  /* margin-left: 70px; */
 }
+
+.subscription {
+  /* margin-left: 93px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
 
 .footer-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .footer-logo-studio {
@@ -764,6 +787,72 @@ display: block;
 .footer-join .social-link:focus {
   background-color: var(--accent-color);
 }
+
+/* Оформити пітписку */
+
+.form-subscription {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.subscription-button {
+  display: flex;
+  position: relative;
+  width: 200px;
+  margin-left: 12px;
+  padding: 10px 28px;
+}
+
+.icon-subscription {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  bottom: 13px;
+
+  
+  fill: var(--main-white-color);
+}
+
+.subscription-mail {
+ display: flex;
+ flex-direction: column;
+ width: 358px;
+}
+
+.subscription-input {
+  margin-top: 20px;
+  height: 50px;
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  color: var(--accent-color);
+  background-color: var(--second-bg-color);
+}
+
+.subscription-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-mail-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--main-white-color);
+}
+
+
 
 /* Портфоліо*************************************************** */
 
