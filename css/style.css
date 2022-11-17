@@ -322,13 +322,20 @@ display: block;
 }
 
 .form-list {
+  position: relative;
   margin-bottom: 10px;
+}
+
+.icon-form{
+  position: absolute;
+  top: 50%;
+  left: 12px;
 }
 
 .modal-input {
   width: 100%;
   height: 40px;
-  padding: 11px 12px;
+  padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -372,8 +379,41 @@ display: block;
   margin-bottom: var(--gap);
 }
 
-.modal-chechbox {
-  border: var(--main-color-text);
+.chechbox-input {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.chackbox-label {
+display: flex;
+align-items: center;
+}
+
+.checkbox-item {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+
+  border-radius: 2px;
+  border: 2px solid var(--main-color-text);
+ 
+}
+
+.chechbox-input:checked + .checkbox-item {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url('../images/icons.svg#chack');
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .chechbox-title {
@@ -410,14 +450,19 @@ display: block;
   justify-content: center;
 }
 
+.form-list:hover .icon-form
+/* .form-list:focus .icon-form */
+{
+  fill: var(--accent-color);
+}
+
 .modal-input:hover,
 .modal-input:focus,
 .modal-textarea:hover,
 .modal-textarea:focus {
-  fill: var(--accent-color);
-  background-color: var(--main-white-color);
   border-color: var(--accent-color);
-  
+  border: 1px solid #2196F3;
+  border-radius: 4px;
 }
 
 /* features */
@@ -807,9 +852,12 @@ display: block;
 
 .icon-subscription {
   position: absolute;
-  top: 13px;
+  /* top: 13px;
   right: 28px;
-  bottom: 13px;
+  bottom: 13px; */
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
 
   
   fill: var(--main-white-color);
