@@ -329,6 +329,7 @@ display: block;
 .icon-form{
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 12px;
 }
 
@@ -340,7 +341,7 @@ display: block;
   border-radius: 4px;
 }
 
-.form-label {
+.label-item {
   display: block;
   width: 100%;
   margin-bottom: 4px;
@@ -379,18 +380,6 @@ display: block;
   margin-bottom: var(--gap);
 }
 
-.chechbox-input {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
 
 .chackbox-label {
 display: flex;
@@ -398,7 +387,7 @@ align-items: center;
 }
 
 .checkbox-item {
-  display: inline-block;
+  display: flex;
   width: 16px;
   height: 15px;
   margin-right: 9px;
@@ -408,13 +397,26 @@ align-items: center;
  
 }
 
-.chechbox-input:checked + .checkbox-item {
+/* .chechbox-input:checked + .checkbox-item {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
-  background-image: url('../images/icons.svg#chack');
-  background-size: contain;
-  background-origin: border-box;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.chechbox-input:checked + .chackbox-label .checkbox-item {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-position: center;
+  border: none;
 }
+
+.chackbox-label .icon-form {
+  fill: transparent;
+}
+
+
 
 .chechbox-title {
   font-weight: 400;
@@ -433,6 +435,7 @@ align-items: center;
   color: var(--accent-color);
 }
 
+
 .modal-button {
   padding: 10px 52px;
 }
@@ -450,10 +453,16 @@ align-items: center;
   justify-content: center;
 }
 
-.form-list:hover .icon-form
-/* .form-list:focus .icon-form */
+.form-list:hover .icon-form,
+.form-list:focus-within .icon-form
 {
   fill: var(--accent-color);
+}
+
+ /* .chechbox-input:focus:not(:checked)+.checkbox-item::before{ */
+  .checkbox-item:focus {
+  border-radius: 2px;
+  border: 2px solid var(--accent-color);
 }
 
 .modal-input:hover,
