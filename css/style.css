@@ -297,6 +297,8 @@ display: block;
   border-radius: 50%;
   background: var(--main-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: fill 250ms var(--timings);
 }
 
 .modal .close-button:hover,
@@ -330,6 +332,8 @@ display: block;
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
+
+  transition: fill 250ms var(--timings)
 }
 
 .modal-input {
@@ -338,6 +342,8 @@ display: block;
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+transition: border-color 250ms var(--timings);
 }
 
 .label-item {
@@ -361,7 +367,7 @@ display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
- 
+ transition: border-color 250ms var(--timings)
 }
 
 .user-text-list {
@@ -402,6 +408,7 @@ display: block;
   border-radius: 2px;
   border: 2px solid var(--main-color-text);
 
+  transition: border-color 250ms var(--timings)
 }
 
 .chackbox-label .checkbox-wrapper {
@@ -444,6 +451,8 @@ display: block;
 
 .modal-button {
   padding: 10px 52px;
+
+  transition: background-color 250ms var(--timings);
 }
 
 .modal-button:hover,
@@ -856,6 +865,8 @@ display: block;
   width: 200px;
   margin-left: 12px;
   padding: 10px 28px;
+
+  transition: background-color 250ms var(--timings)
 }
 
 .icon-subscription {
