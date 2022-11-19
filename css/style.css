@@ -299,7 +299,6 @@ display: block;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
 .modal .close-button:hover,
 .modal .close-button:focus {
   fill: var(--accent-color);
@@ -326,7 +325,7 @@ display: block;
   margin-bottom: 10px;
 }
 
-.icon-form{
+.icon-form {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -350,7 +349,7 @@ display: block;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  color:var(--second-color-text);
+  color: var(--second-color-text);
 }
 
 .modal-textarea {
@@ -361,6 +360,8 @@ display: block;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+ 
 }
 
 .user-text-list {
@@ -373,63 +374,56 @@ display: block;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  
 }
 
 .checkbox-list {
+  display: inline-block;
   margin-bottom: var(--gap);
 }
 
+/* .chechbox-input {
+  appearance: none;
+} */
 
 .chackbox-label {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.checkbox-item {
+.checkbox-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 15px;
   margin-right: 9px;
 
   border-radius: 2px;
   border: 2px solid var(--main-color-text);
- 
+
 }
 
-.checkbox-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* width: 16px;
-  height: 15px;
-  margin-right: 9px; */
-
-  /* border-radius: 2px;
-  border: 2px solid var(--main-color-text); */
- 
+.chackbox-label .checkbox-wrapper {
+  fill: transparent;
 }
 
-/* .chechbox-input:checked + .checkbox-item {
+.chechbox-input:checked + .chackbox-label .checkbox-wrapper {
+  fill: var(--main-white-color);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.chechbox-input:focus + .chackbox-label .checkbox-wrapper {
+  border-color: var(--accent-color);
+}
+/* .chechbox-input:checked + .checkbox-wrapper {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
 } */
-
-.chechbox-input:checked + .chackbox-label .checkbox-item {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  background-position: center;
-  border: none;
-}
-
-.chackbox-label .icon-form {
-  fill: transparent;
-}
-
-
 
 .chechbox-title {
   font-weight: 400;
@@ -448,7 +442,6 @@ align-items: center;
   color: var(--accent-color);
 }
 
-
 .modal-button {
   padding: 10px 52px;
 }
@@ -461,21 +454,14 @@ align-items: center;
 }
 
 .modal-btn {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .form-list:hover .icon-form,
-.form-list:focus-within .icon-form
-{
+.form-list:focus-within .icon-form {
   fill: var(--accent-color);
-}
-
- /* .chechbox-input:focus:not(:checked)+.checkbox-item::before{ */
-  .checkbox-item:focus {
-  border-radius: 2px;
-  border: 2px solid var(--accent-color);
 }
 
 .modal-input:hover,
@@ -483,7 +469,7 @@ align-items: center;
 .modal-textarea:hover,
 .modal-textarea:focus {
   border-color: var(--accent-color);
-  border: 1px solid #2196F3;
+  border: 1px solid #2196f3;
   border-radius: 4px;
 }
 
@@ -744,7 +730,7 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
-} 
+}
 
 .footer-list {
   display: flex;
@@ -859,7 +845,7 @@ align-items: center;
 
 .form-subscription {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   align-items: flex-end;
 }
@@ -881,14 +867,13 @@ align-items: center;
   right: 28px;
   transform: translateY(-50%);
 
-  
   fill: var(--main-white-color);
 }
 
 .subscription-mail {
- display: flex;
- flex-direction: column;
- width: 358px;
+  display: flex;
+  flex-direction: column;
+  width: 358px;
 }
 
 .subscription-input {
@@ -900,7 +885,7 @@ align-items: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
-  color: var(--accent-color);
+  color: var(--main-white-color);
   background-color: var(--second-bg-color);
 }
 
@@ -921,8 +906,6 @@ align-items: center;
 
   color: var(--main-white-color);
 }
-
-
 
 /* Портфоліо*************************************************** */
 
